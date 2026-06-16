@@ -124,13 +124,13 @@ export default function App() {
   const daysRemaining = 22;
 
   return (
-    <div className="min-h-screen bg-[#080808] p-6">
+    <div className="min-h-screen bg-[#080808] p-4 sm:p-6">
       <div className="max-w-7xl mx-auto">
-        <header className="mb-8">
-          <div className="flex items-center justify-between mb-6">
+        <header className="mb-6 sm:mb-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
             <div>
               <h1
-                className="uppercase tracking-widest text-4xl mb-2"
+                className="uppercase tracking-widest text-2xl sm:text-3xl lg:text-4xl mb-2"
                 style={{
                   fontFamily: "var(--font-display)",
                   background:
@@ -150,16 +150,21 @@ export default function App() {
                 Dashboard de Gestão Gamificada
               </p>
             </div>
-            <div className="flex gap-3">
-              <NeonButton variant="secondary" onClick={() => setConfigModalOpen(true)}>
-                <Settings className="w-4 h-4 mr-2 inline" />
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+              <NeonButton
+                variant="secondary"
+                className="w-full sm:w-auto justify-center"
+                onClick={() => setConfigModalOpen(true)}
+              >
+                <Settings className="w-4 h-4 mr-2 inline shrink-0" />
                 Config
               </NeonButton>
               <NeonButton
                 variant="primary"
+                className="w-full sm:w-auto justify-center"
                 onClick={() => setModalOpen(true)}
               >
-                <Plus className="w-4 h-4 mr-2 inline" />
+                <Plus className="w-4 h-4 mr-2 inline shrink-0" />
                 Nova Despesa
               </NeonButton>
             </div>
@@ -214,12 +219,13 @@ export default function App() {
           <QuestLog transactions={transactions} />
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 sm:mt-8 flex justify-center px-2">
           <NeonButton
             variant="secondary"
+            className="w-full sm:w-auto justify-center max-w-sm"
             onClick={() => setReportModalOpen(true)}
           >
-            <Download className="w-4 h-4 mr-2 inline" />
+            <Download className="w-4 h-4 mr-2 inline shrink-0" />
             Exportar Relatório
           </NeonButton>
         </div>
