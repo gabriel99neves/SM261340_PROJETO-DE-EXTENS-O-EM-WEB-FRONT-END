@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'JetBrains Mono', monospace;
+  --color-neon-green: #00FF41;
+  --color-neon-blue: #39FF14;
+  --color-bg: #080808;
+  --color-bg-panel: #111111;
+  --color-border: #222222;
+  --color-text-muted: #B0B0B0;
+  --color-text-bright: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-bright);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilitários de brilho neon */
+.neon-border {
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.neon-text {
+  color: var(--color-neon-green);
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+.neon-border-blue {
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.neon-text-blue {
+  color: var(--color-neon-blue);
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* Animação de Shimmer */
+@keyframes shimmer {
+  0% { background-position: 200% 200%; }
+  100% { background-position: -200% -200%; }
+}
