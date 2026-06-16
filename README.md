@@ -50,4 +50,4 @@ Siga as instruções abaixo para instalar as dependências e iniciar o servidor 
 
 1. **Clone o repositório** (ou faça o download da pasta do projeto):
 ```bash
-   git clone [https://github.com/gabriel99neves/UnicariocaFrontEnd]
+   git clone (https://github.com/gabriel99neves/SM261340_PROJETO-DE-EXTENS-O-EM-WEB-FRONT-END.git)
